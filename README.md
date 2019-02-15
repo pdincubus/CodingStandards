@@ -1,4 +1,4 @@
-# Plusnet Standards
+# Coding Standards
 
 ## Our standards
 
@@ -122,8 +122,9 @@ trim_trailing_whitespace = false
 indent_size = 2
 ```
 
+You'll need a [plugin](https://packagecontrol.io/packages/EditorConfig) to enable this in Sublime Text, or install [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+
+
 ## Contributing
 
-These standards are meant to be a 'living' set of documents that will evolve over time. If you have any suggestions, corrections or updates please create a JIRA task on the [FRONT](https://jira.int.plus.net/secure/RapidBoard.jspa?rapidView=770&projectKey=FRONT&view=planning.nodetail&selectedIssue=FRONT-15&epics=visible) board under the [Linting and standards](https://jira.int.plus.net/browse/FRONT-5) epic to promote discussion.
-
-To submit changes to the documents, please create a feature branch from `develop` in the standard Plusnet format `feature-FRONT-[task ID]-[your initials]-[PascalCase descriptive name]` and reference it in your JIRA task so it can be reviewed.
+These standards are meant to be a 'living' set of documents that will evolve over time. If you have any suggestions, corrections or updates please create a ticket/pull request/issue on this repository/email me/speak to me in person.

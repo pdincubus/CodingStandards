@@ -13,9 +13,7 @@
 ### Javascript
 
 * Vanilla Javascript
-* [React](https://reactjs.org/) - For components
-* [Angular](https://angular.io/) - For single-page applications
-* [Modernizr](https://modernizr.com/) (only slimline production builds with minimal tests/checks)
+* [React](https://reactjs.org/)
 * [Babel](https://babeljs.io/)
 * [Lodash](https://lodash.com/) - individual modules only when the functionality is not available in any other sensible way
 
@@ -31,9 +29,11 @@
 ### Testing
 
 * [Jest](https://jestjs.io/)
+* [Enzyme](https://airbnb.io/enzyme/)
 
 ## Blacklist/phasing out
 
+* [Modernizr](https://modernizr.com/) (only slimline production builds with minimal tests/checks should be currently used)
 * [Sass](https://sass-lang.com/)
 * [jQuery](https://jquery.com/)
 * [Grunt](https://gruntjs.com/)
@@ -46,3 +46,4 @@
 * [AngularJS](https://angularjs.org/)
 * [Velocity.js](http://velocityjs.org/)
 * [Underscore](https://underscorejs.org/)
+* [Smarty](https://www.smarty.net/)

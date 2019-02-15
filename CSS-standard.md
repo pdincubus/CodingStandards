@@ -104,7 +104,7 @@ Finally, properties are what give the selected elements of a rule declaration th
 * Do not add blank lines between declarations
 * Do not set all values for a property when not required, e.g. set `margin-bottom: 10px` instead of `margin: 0 0 10px 0`
 * Do not add vendor-prefixed declarations to source stylesheets, unless it is something [Autoprefixer](https://github.com/postcss/autoprefixer) cannot account for
-* Ensure declaration order standards are followed
+* Ensure [declaration order](#declaration-order) standards are followed
 * Do not leave more than 1 empty line outside of rule sets
 * Ensure 1 blank line separates rulesets
 * Leave an empty line at the end of a file
@@ -158,6 +158,8 @@ Related property declarations should be grouped together following the order:
 5. `@media` - media queries should be defined last for ease of modification and readability.
 
 Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
+
+There's a [CSS Comb](.csscomb.json) config for this, and you can install a plugin for your favourite editor.
 
 <a name="media-query-placement"></a>
 ## Media query placement
@@ -237,16 +239,16 @@ It's a similar convention to the BEM alternative ['Two Dashes'](https://en.bem.i
 
 Namespace - Block - Element - Modifier
 
-`.pn-` + `block-name` + `__elem-name` + `--modifier-name` === `.pn-modal__title--alt`.
+`.namespace-` + `block-name` + `__elem-name` + `--modifier-name` === `.mysite-modal__title--alt`.
 
 If you require further specificity, for example if you're working on Account Change or Member Centre, you can add an additional namespace after `pn`, e.g:
 
-`.pn-ac-block-name__elem-name--modifier-name` or `.pn-mc-block-name__elem-name--modifier-name`
+`.mysite-block-name__elem-name--modifier-name` or `.mysite-block-name__elem-name--modifier-name`
 
 An example:
 
 ```css
-    .pn-modal {
+    .mysite-modal {
         /* Styles that do not change across breakpoints */
 
         &--large {
@@ -270,7 +272,7 @@ An example:
         }
     }
 
-    .pn-modal__title {
+    .mysite-modal__title {
         /* Styles that do not change across breakpoints */
 
         @media (--desktop) {
@@ -286,7 +288,7 @@ An example:
         }
     }
 
-    .pn-modal__content {
+    .mysite-modal__content {
         /* Styles that do not change across breakpoints */
 
         @media (--desktop) {
@@ -302,7 +304,7 @@ An example:
         }
     }
 
-    .pn-modal__link {
+    .mysite-modal__link {
         /* Styles that do not change across breakpoints */
 
         &:hover,

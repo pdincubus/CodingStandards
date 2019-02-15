@@ -137,7 +137,7 @@ After:
 ```javascript
 const doThing = (arg1 = 'haha', arg2 = 'hoho') => {
     console.log(`${arg1} ${arg2}`);
-};
+}
 ```
 
 <a name="promises-fetch"></a>
@@ -193,7 +193,13 @@ fetch('random-doc.txt')
 Before:
 
 ```javascript
-    var houses = ['terrace', 'semi-detatched', 'detatched', 'flat'];
+    var houses = [
+        'terrace',
+        'semi-detatched',
+        'detatched',
+        'flat'
+    ];
+
     var bungalowExists = (houses.indexOf('bungalow') > -1);
 
     console.log(bungalowExists);
@@ -202,7 +208,13 @@ Before:
 After:
 
 ```javascript
-    const houses = ['terrace', 'semi-detatched', 'detatched', 'flat'];
+    const houses = [
+        'terrace',
+        'semi-detatched',
+        'detatched',
+        'flat'
+    ];
+
     const bungalowExists = houses.includes('bungalow');
 
     console.log(bungalowExists);
@@ -232,10 +244,10 @@ After:
 
 ```javascript
 function getUser(){
-let name = 'Mark';
-let age = 37;
+    let name = 'Mark';
+    let age = 37;
 
-return {name, age};
+    return {name, age};
 }
 
 console.log(getUser().name);
