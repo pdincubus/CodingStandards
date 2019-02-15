@@ -73,6 +73,7 @@ jQuery:
 ```javascript
 $('.elem').addClass('is_active');
 $('.elem').removeClass('is_active');
+$('.elem').hasClass('is_active);
 ```
 
 Vanilla:
@@ -82,6 +83,7 @@ const elem = document.querySelector('.elem');
 
 elem.classList.add('is_active');
 elem.classList.remove('is_active');
+elem.classList.contains('is_active);
 
 // Or to wipe out anything there and add new class
 elem.classList = 'is_active';
@@ -249,4 +251,7 @@ document.onreadystatechange = function () {
 window.addEventListener('load', () => {
     console.log('Everything has finished loading.');
 });
+
+// But really we don't need to do a 'document ready' check
+// if our scripts are loaded at the end of the page
 ```
