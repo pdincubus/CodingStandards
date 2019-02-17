@@ -73,7 +73,7 @@ jQuery:
 ```javascript
 $('.elem').addClass('is_active');
 $('.elem').removeClass('is_active');
-$('.elem').hasClass('is_active);
+$('.elem').hasClass('is_active');
 ```
 
 Vanilla:
@@ -83,7 +83,7 @@ const elem = document.querySelector('.elem');
 
 elem.classList.add('is_active');
 elem.classList.remove('is_active');
-elem.classList.contains('is_active);
+elem.classList.contains('is_active');
 
 // Or to wipe out anything there and add new class
 elem.classList = 'is_active';
