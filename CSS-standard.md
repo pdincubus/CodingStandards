@@ -25,7 +25,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-The Plusnet CSS Standard is based upon a combination of (and in some cases stolen verbatim from) many other great styleguides, including:
+This CSS Standard is based upon a combination of (and in some cases stolen verbatim from) many other great styleguides, including:
 
 * http://codeguide.co/#css
 * https://github.com/sky-uk/css

@@ -650,7 +650,7 @@ required to explain what is going on extract that code to a suitably name variab
     /**
      * Class description
      *
-     * @author Your Name <your.email@plus.net>
+     * @author Your Name <your.email@website.com>
      * @package TheRepoNameProbably
      */
     export default class ClassName {

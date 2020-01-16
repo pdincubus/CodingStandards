@@ -14,7 +14,7 @@
 * Do not specify `type` attributes for CSS, Javascript, e.g. `<link rel="stylesheet" href="code-guide.css">` and not `<link rel="stylesheet" type="text/css" href="code-guide.css">`
 * Strive to use the least number of elements possible. Do not unnecessarily nest elements
 * Do not include values for boolean attributes, e.g. `<input type="text" disabled>` and not `<input type="text" disabled="true">` or `<input type="text" disabled="disabled">`
-* Do not use protocol-less links. Always specify the protocol, e.g `<a href="https://www.plus.net">Plusnet website</a>` and not `<a href="//www.plus.net">Plusnet website</a>`
+* Do not use protocol-less links. Always specify the protocol, e.g `<a href="https://www.website.com">Our website</a>` and not `<a href="//www.website.com">Our website</a>`
 * Ensure sites are served over HTTPS
 * Always include an `alt` attribute for `<img>` elements, even if it's left empty
 * Form labels should always include a `for` attribute
