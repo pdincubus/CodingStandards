@@ -1,23 +1,5 @@
-# Switching from jQuery to vanilla Javascript
+# jQuery to modern JavaScript
 
-<!-- MarkdownTOC autolink="true" -->
-
-- [Selectors](#selectors)
-- [Attributes](#attributes)
-- [Classnames](#classnames)
-- [Each](#each)
-- [Event listeners](#event-listeners)
-- [Show/hide](#showhide)
-- [`html => innerHtml`](#html--innerhtml)
-- [`text => textContent`](#text--textcontent)
-- [`.val => .value`](#val--value)
-- [`$('.elem').css(prop, val) => elem.style.prop = value`](#%24elemcssprop-val--elemstyleprop--value)
-- [`document.ready()` and `window.load()`](#documentready-and-windowload)
-
-<!-- /MarkdownTOC -->
-
-
-<a name="selectors"></a>
 ## Selectors
 
 jQuery:
@@ -35,7 +17,6 @@ document.querySelector('.selector');
 document.getElementById('selector');
 ```
 
-<a name="attributes"></a>
 ## Attributes
 jQuery:
 
@@ -65,7 +46,8 @@ console.log(thingElem.getAttribute('data-name'));
 console.log(thingElem.dataset.name);
 ```
 
-<a name="classnames"></a>
+Data attributes are _always_ strings. If you need to store numbers, remember to parse for that!
+
 ## Classnames
 
 jQuery:
@@ -86,10 +68,9 @@ elem.classList.remove('is_active');
 elem.classList.contains('is_active');
 
 // Or to wipe out anything there and add new class
-elem.classList = 'is_active';
+elem.className = 'is_active';
 ```
 
-<a name="each"></a>
 ## Each
 
 jQuery:
@@ -110,7 +91,6 @@ nodesToLoop.forEach(nodeLoop => {
 });
 ```
 
-<a name="event-listeners"></a>
 ## Event listeners
 
 jQuery
@@ -133,7 +113,6 @@ buttonElem.addEventListener('click', e => {
 });
 ```
 
-<a name="show-hide"></a>
 ## Show/hide
 
 jQuery:
@@ -148,12 +127,18 @@ Vanilla:
 ```javascript
 const elem = document.querySelector('.elem');
 
+// Can do this, but ideally avoid
 elem.style.display = 'none';
 elem.style.display = 'block';
+
+// Preferable since we should have full control over CSS as well!
+elem.classList.remove('is_hidden');
+
+// Or even (at a push)
+elem.removeAttribute('hidden');
 ```
 
-<a name="html-innerhtml"></a>
-## `html => innerHtml`
+## `html => innerHTML`
 
 jQuery:
 
@@ -166,10 +151,9 @@ Vanilla:
 ```javascript
 const elem = document.querySelector('.elem');
 
-elem.innerHtml = '<div>Wut<div>';
+elem.innerHtml = '<div>Wut</div>';
 ```
 
-<a name="text-textcontent"></a>
 ## `text => textContent`
 
 jQuery:
@@ -186,22 +170,36 @@ const elem = document.querySelector('.elem');
 elem.textContent = 'Wut';
 ```
 
-<a name="val-value"></a>
-## `.val => .value`
+## `.val(x) => .value = "x"`
+
+To get:
 
 jQuery:
 
 ```javascript
-var elemValue = $('.elem').val();
+var elemValue = $('.form-elem').val();
 ```
 
 Vanilla:
 
 ```javascript
-const elemValue = document.querySelector('.elem').value;
+const elemValue = document.querySelector('.form-elem').value;
 ```
 
-<a name="prop-val"></a>
+To set:
+
+jQuery:
+
+```javascript
+$('.form-elem').val('hello');
+```
+
+Vanilla:
+
+```javascript
+document.querySelector('.form-elem').value = 'hello';
+```
+
 ## `$('.elem').css(prop, val) => elem.style.prop = value`
 
 jQuery:
@@ -216,9 +214,11 @@ Vanilla:
 const elem = document.querySelector('.elem');
 
 elem.style.color = '#000';
+
+// Note: things are camel-case here, so:
+elem.style.backgroundColor = '#fff';
 ```
 
-<a name="ready-load"></a>
 ## `document.ready()` and `window.load()`
 
 jQuery:
@@ -236,22 +236,22 @@ $(window).load(function () {
 Vanilla:
 
 ```javascript
+// DOM has been loaded and parsed
 window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded');
 });
 
-// Or...
-
-document.onreadystatechange = function () {
-    if (document.readyState === 'interactive') {
-        console.log('DOM loaded');
-    }
-};
-
+// All assets are loaded
 window.addEventListener('load', () => {
     console.log('Everything has finished loading.');
 });
+```
 
-// But really we don't need to do a 'document ready' check
-// if our scripts are loaded at the end of the page
+We should be using `defer` on our scripts, and ensuring we're setting the <script> element to have `type="module"`.
+
+```html
+<!-- Best option -->
+<script type="module" src="/app.js"></script>
+<!-- or -->
+<script src="/app.js" defer></script>
 ```

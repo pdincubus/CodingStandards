@@ -1,0 +1,30 @@
+{
+    "home": {
+        "pageWeightKb": 950,
+        "scriptKb": 220,
+        "imageKb": 600,
+        "thirdPartyKb": 100,
+        "requests": 65
+    },
+    "plp": {
+        "pageWeightKb": 1200,
+        "scriptKb": 250,
+        "imageKb": 800,
+        "thirdPartyKb": 120,
+        "requests": 80
+    },
+    "pdp": {
+        "pageWeightKb": 1400,
+        "scriptKb": 260,
+        "imageKb": 950,
+        "thirdPartyKb": 140,
+        "requests": 90
+    },
+    "content": {
+        "pageWeightKb": 700,
+        "scriptKb": 120,
+        "imageKb": 450,
+        "thirdPartyKb": 60,
+        "requests": 40
+    }
+}

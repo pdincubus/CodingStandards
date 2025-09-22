@@ -1,0 +1,15 @@
+# Path based ownership, one primary owner per area
+/standards/html.md                 @pdincubus
+/standards/css.md                  @pdincubus
+/standards/js.md                   @pdincubus
+/standards/ts.md                   @pdincubus
+/standards/react.md                @pdincubus
+/standards/accessibility.md        @pdincubus
+/standards/performance.md          @pdincubus
+/standards/security.md             @pdincubus
+/policies/                         @pdincubus
+/guides/                           @pdincubus
+/examples/                         @pdincubus
+/rfc/                              @pdincubus
+/adr/                              @pdincubus
+*                                  @pdincubus
