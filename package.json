@@ -1,0 +1,30 @@
+{
+    "name": "cop-fe",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "lint": "eslint .",
+        "format": "prettier -w .",
+        "stylelint": "stylelint \"**/*.css\"",
+        "check:budgets": "node scripts/ci/check-budgets.mjs budgets/budgets.json reports/route-sizes.json"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx,md,css}": [
+            "prettier -w"
+        ]
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.12.0",
+        "@typescript-eslint/eslint-plugin": "^8.7.0",
+        "@typescript-eslint/parser": "^8.7.0",
+        "eslint": "^9.12.0",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-jsx-a11y": "^6.9.0",
+        "eslint-plugin-react": "^7.36.0",
+        "prettier": "^3.3.3",
+        "stylelint": "^16.8.0",
+        "stylelint-config-standard": "^36.0.0",
+        "typescript": "^5.6.2"
+    }
+}

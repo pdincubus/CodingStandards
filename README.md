@@ -1,130 +1,29 @@
-# Coding Standards
+# Front End Community of Practice
 
-## Our standards
+Purpose
+- Improve accessibility, performance, and code quality across products.
+- Share solutions and reduce duplicate effort.
 
-* [CSS standard](CSS-standard.md)
-* [Javascript standard](Javascript-standard.md)
-    - [Common ES6 Features](Javascript-Common-ES6-Features.md)
-    - [Switching From jQuery to Vanilla Javascript](Javascript-Switching-From-jQuery-to-Vanilla-Javascript.md)
-* [React/JSX standard](React-JSX-standard.md)
-* [HTML standard](HTML-standard.md)
-* [Technology whitelist and blacklist](technology.md)
+Scope
+- HTML, CSS, JavaScript, TypeScript, React, design systems, accessibility, performance, security, testing, tooling.
 
-## Sublime Text niceties
+How this repo works
+- Standards live under [`/standards`](/standards).
+- Policies under [`/policies`](/policies).
+- Practical guides under [`/guides`](/guides).
+- Decisions use [RFC](/rfc) and [ADRs](/adr).
+- Copyable patterns live under [`/examples`](/examples).
 
-If you're using Sublime as your editor-of-choice, you can add a few settings to help you out. You can quickly set your ruler guides to help you keep your line lengths within limits:
+Change process
+1. Open an issue with context, goal, and success measure.
+2. Propose a change with an RFC.
+3. Decide in a CoP session.
+4. Record the decision as an ADR.
+5. Update docs and examples.
 
-```
-"rulers":
-[
-    0,
-    12,
-    80
-],
-```
-
-This will add a ruler at 3 soft tabs (for avoiding deep nesting in CSS), 80 characters (for JS, CSS line lengths). Other useful recommended settings:
-
-```
-"default_encoding": "UTF-8",
-"default_line_ending": "unix",
-"detect_indentation": false,
-"dictionary": "Packages/Language - English/en_GB.dic",
-"drag_text": false,
-"draw_white_space": "all",
-"ensure_newline_at_eof_on_save": true,
-"fallback_encoding": "UTF-8",
-"file_exclude_patterns":
-[
-    "*.pyc",
-    "*.pyo",
-    "*.exe",
-    "*.dll",
-    "*.obj",
-    "*.o",
-    "*.a",
-    "*.lib",
-    "*.so",
-    "*.dylib",
-    "*.ncb",
-    "*.sdf",
-    "*.suo",
-    "*.pdb",
-    "*.idb",
-    ".DS_Store",
-    "*.class",
-    "*.psd",
-    "*.db",
-    "*.sublime-workspace",
-    "yarn.lock"
-],
-"folder_exclude_patterns":
-[
-    ".svn",
-    ".git",
-    ".hg",
-    "CVS",
-    "node_modules"
-],
-"gutter": true,
-"highlight_line": true,
-"highlight_modified_tabs": true,
-"indent_guide_options":
-[
-    "draw_normal",
-    "draw_active"
-],
-"indent_subsequent_lines": true,
-"line_numbers": true,
-"line_padding_bottom": 4,
-"line_padding_top": 3,
-"margin": 4,
-"match_brackets": true,
-"match_brackets_braces": true,
-"match_brackets_content": true,
-"match_brackets_square": true,
-"match_bracktets_angle": true,
-"match_tags": true,
-"scroll_past_end": false,
-"shift_tab_unindent": true,
-"show_line_endings": true,
-"smart_indent": true,
-"tab_size": 4,
-"trailing_spaces_file_max_size": 1000,
-"trailing_spaces_highlight_color": "invalid",
-"translate_tabs_to_spaces": true,
-"trim_trailing_white_space_on_save": true,
-"use_tab_stops": true,
-"word_separators": "./\\()\"'-:,.;<>~!@#$Â£â‚¬#Â¢âˆžÂ§Â¶â€¢ÂªÂºâ€“â‰ Â§Â±%^&*|+=[]{}`~?_",
-"word_wrap": false
-```
-
-## Editor config
-
-An [`.editorconfig`](https://editorconfig.org/) file should be present in any repository you work on. This will attempt to set your editor-of-choice to use the following defaults:
-
-```
-# editorconfig.org
-root = true
-
-[*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false
-
-[*.{yml, yaml}]
-indent_size = 2
-```
-
-You'll need a [plugin](https://packagecontrol.io/packages/EditorConfig) to enable this in Sublime Text, or install [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
-
-
-## Contributing
-
-These standards are meant to be a 'living' set of documents that will evolve over time. If you have any suggestions, corrections or updates please create a ticket/pull request/issue on this repository/email me/speak to me in person.
+Success measures
+- PR lead time and review time.
+- Core Web Vitals at p75: LCP, INP, CLS.
+- Bundle size per route.
+- Accessibility defects per release.
+- Adoption of shared components.

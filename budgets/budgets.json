@@ -1,0 +1,38 @@
+{
+    "notes": "Targets at p75 on real users. Tighten each quarter.",
+    "webVitals": {
+        "lcpMs": 2500,
+        "inpMs": 200,
+        "cls": 0.1
+    },
+    "pageTypes": {
+        "home": {
+            "maxPageWeightKb": 1000,
+            "maxScriptKb": 250,
+            "maxImageKb": 650,
+            "maxThirdPartyKb": 120,
+            "maxRequests": 70
+        },
+        "plp": {
+            "maxPageWeightKb": 1300,
+            "maxScriptKb": 280,
+            "maxImageKb": 900,
+            "maxThirdPartyKb": 140,
+            "maxRequests": 90
+        },
+        "pdp": {
+            "maxPageWeightKb": 1500,
+            "maxScriptKb": 300,
+            "maxImageKb": 1100,
+            "maxThirdPartyKb": 160,
+            "maxRequests": 100
+        },
+        "content": {
+            "maxPageWeightKb": 800,
+            "maxScriptKb": 150,
+            "maxImageKb": 500,
+            "maxThirdPartyKb": 80,
+            "maxRequests": 50
+        }
+    }
+}

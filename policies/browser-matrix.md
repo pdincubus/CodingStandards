@@ -1,0 +1,13 @@
+# Browser and device support
+
+## `browserslist`
+
+```
+fully supports es6-module,
+fully supports es6-module-dynamic-import,
+fully supports css-cascade-layers,
+fully supports css-container-queries,
+fully supports css-nesting,
+fully supports css-logical-props,
+fully supports prefers-color-scheme
+```
